@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "packages": [
+    {
+      "name": "@ai-sdk/gladia",
+      "reviewedVersion": "3.0.68",
+      "ledgerKind": "provider",
+      "evidence": "`AIProviders.gladia`, `GladiaTranscriptionModel`, `GladiaProviderTests.swift`",
+      "reviewStatus": "imported-reviewed-with-gaps",
+      "archiveIntegrity": "sha512-UyzBg71CKB+qoLJF5t56TdT5E7Ffgu1QE0ALkSGjwheJqz65g6Z/TMZDahM2IZHS8pupLcGVBnFpVwUyyo/UJA==",
+      "sourceRef": "npm:@ai-sdk/gladia@3.0.68",
+      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
+      "testRefRelationship": "inventory-snapshot-not-release-verified",
+      "contractFamilies": [],
+      "contractReview": "not-imported; inspect upstream declarations before extraction"
+    }
+  ]
+}

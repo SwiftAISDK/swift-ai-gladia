@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "package": "swift-ai-gladia",
+  "status": "coarse-import",
+  "upstream": [
+    {
+      "name": "@ai-sdk/gladia",
+      "implementation": [
+        "packages/gladia/src"
+      ],
+      "tests": [
+        "packages/gladia/src/gladia-error.test.ts",
+        "packages/gladia/src/gladia-transcription-model.test.ts",
+        "packages/gladia/src/lazy-schemas.test.ts"
+      ]
+    }
+  ],
+  "swift": {
+    "sources": [
+      "Sources/SwiftAIGladia/GladiaAudioModels.swift",
+      "Sources/SwiftAIGladia/GladiaProvider.swift",
+      "Sources/SwiftAIGladia/GladiaTranscriptionParsing.swift"
+    ],
+    "tests": [
+      "Tests/SwiftAIGladiaTests/FixtureDownloadTransport.swift",
+      "Tests/SwiftAIGladiaTests/GladiaProviderTests.swift",
+      "Tests/SwiftAIGladiaTests/GladiaTranscriptionSchemaAndLifecycleTests.swift",
+      "Tests/SwiftAIGladiaTests/TestSupport.swift"
+    ],
+    "resources": []
+  },
+  "differences": [
+    {
+      "kind": "native-adaptation",
+      "reason": "Preserve Swift async/await, Sendable, Foundation transport and existing documented gaps; see Docs/CoreV6Parity.md and PortingStatus.md."
+    }
+  ],
+  "reviewNote": "M6: provider runtime, configuration and focused tests extracted. Existing upstream baseline, capability boundaries and gaps retained.",
+  "canonicalOnlyReferences": [],
+  "canonicalDirectory": "Packages/swift-ai-gladia"
+}
