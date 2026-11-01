@@ -1,41 +1,44 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-gladia",
-  "version": "1.0.0",
-  "releaseID": "modular-3",
+  "version": "1.1.0",
+  "releaseID": "weekly-upstream-20261101",
   "source": {
-    "commit": "7fc9b4cd72f8f83b75ba7eee2e38d37127539317",
-    "baseCommit": "7fc9b4cd72f8f83b75ba7eee2e38d37127539317",
+    "commit": "ea057797494ab9bb66df8c6bfd8edc10245b20e7",
+    "baseCommit": "ea057797494ab9bb66df8c6bfd8edc10245b20e7",
     "workingTree": false,
-    "inputsSHA256": "49b802ba4a30454f78c9886ab3114537ef659ab3e6db7775479b7351f6e3f0ab"
+    "inputsSHA256": "b46f3e07b0a583d6fee81035987d74a06fc5c6109cbdf228144d1172d2c3676e"
   },
   "dependencies": [
     {
       "package": "swift-ai-core",
-      "from": "1.1.0"
+      "from": "1.2.0"
     }
   ],
   "changes": [
     {
-      "id": "remaining-package-extraction",
-      "notes": "Extract the existing runtime, typed settings and standalone tests from the compatibility aggregate. Preserve the reviewed npm baseline and existing capability/gap boundaries.",
-      "compatibility": "Initial independent Swift package version. Existing SwiftAISDK entry points remain in the development compatibility facade; no npm-version equivalence is implied."
+      "id": "weekly-upstream-20261101",
+      "notes": "Add native async throwing apiKeyProvider; resolve a fresh key immediately before every authenticated HTTP send/stream through the shared transport. Preserve static keys, custom header precedence, error/abort propagation, request builders and response parsers. TypeScript Resolvable/promise/function declarations map to an optional Sendable async closure. No other portable wire/runtime change was found in the published delta. Reviewed upstream: @ai-sdk/gladia 3.0.68 to 3.0.72. Validation passed: node Scripts/test-packages.mjs (all 52 owning package suites and the compatibility facade); node Scripts/sdk.mjs generate --check; node --test Scripts/tests/*.test.cjs (27 passed); docs-site check and build (100 pages). Live provider calls were not run.",
+      "compatibility": "Minor release for additive native API; existing static settings and call sites remain compatible. Updated direct dependency minimums are recorded in the manifest. Existing documented JS/framework and native product gaps remain; version-delta review does not imply full parity or live-service testing. Explicit custom authentication skips an unused credential supplier, a deliberate native callback-order adaptation."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-gladia",
   "upstream": [
     {
       "name": "@ai-sdk/gladia",
-      "reviewedVersion": "3.0.68",
+      "reviewedVersion": "3.0.72",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.gladia`, `GladiaTranscriptionModel`, `GladiaProviderTests.swift`",
+      "evidence": "`AIProviders.gladia`, `GladiaTranscriptionModel`, `GladiaProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-UyzBg71CKB+qoLJF5t56TdT5E7Ffgu1QE0ALkSGjwheJqz65g6Z/TMZDahM2IZHS8pupLcGVBnFpVwUyyo/UJA==",
-      "sourceRef": "npm:@ai-sdk/gladia@3.0.68",
-      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
-      "testRefRelationship": "inventory-snapshot-not-release-verified",
-      "contractFamilies": [],
-      "contractReview": "not-imported; inspect upstream declarations before extraction"
+      "archiveIntegrity": "sha512-ThGKYBeKIk1VaEmzn0oO6FU4Z7wYjbcJ6YutbkYfLxBgCMyeVCtKqgkAqKSH8c07pZBKd2CDXUHXIhkhPCZCdg==",
+      "sourceRef": "npm:@ai-sdk/gladia@3.0.72",
+      "testRef": "9b603d36186b75e58d5479445a96c76f6e2d2700",
+      "testRefRelationship": "matching-release",
+      "contractFamilies": [
+        "ProviderV4",
+        "TranscriptionModelV4"
+      ],
+      "contractReview": "2026-11-01: published declarations, source and exact matching-release changed tests reviewed; scoped dispositions and Swift translations are in Docs/WeeklyUpstreamAudit20261101.json. Existing broader product gaps remain; reviewed delta is not full-package parity."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -54,7 +57,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-gladia/Porting/map.json",
-      "sha256": "91410da762d44b62a00f0d8afeb57604fb0df8f84c9c9d8af806db83cedc93a1"
+      "sha256": "7f51ecccc1d5b33e5df923d15d3d3814c236fde84d2d437275c65e14afc8a092"
     },
     {
       "canonicalPath": "Packages/swift-ai-gladia/README.md",
@@ -66,7 +69,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-gladia/Sources/SwiftAIGladia/GladiaProvider.swift",
-      "sha256": "376367ec80bf12f61066e7e01b61e8158f986bd9fd2ad25d6b095406fc644f9c"
+      "sha256": "cb89363f1b8cce0a266c676ac0070fd6c46d7c0cb054cd8603c681576e464b15"
     },
     {
       "canonicalPath": "Packages/swift-ai-gladia/Sources/SwiftAIGladia/GladiaTranscriptionParsing.swift",
@@ -78,7 +81,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-gladia/Tests/SwiftAIGladiaTests/GladiaProviderTests.swift",
-      "sha256": "6eea3676edb3962c28fd11f6880d209ad2c4c96a6dac9d86f578965b8cb37d5e"
+      "sha256": "f03213c9a5c8a4b08bc17a69297a65b291d39c808b1a9302ead56c0124a1c405"
     },
     {
       "canonicalPath": "Packages/swift-ai-gladia/Tests/SwiftAIGladiaTests/GladiaTranscriptionSchemaAndLifecycleTests.swift",
@@ -87,6 +90,10 @@
     {
       "canonicalPath": "Packages/swift-ai-gladia/Tests/SwiftAIGladiaTests/TestSupport.swift",
       "sha256": "e71e0a6bb498ae53e82ce38398a3edcf8f566081019715ab01d67f4073019a2a"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-gladia/Tests/SwiftAIGladiaTests/Weekly20261101CredentialsTests.swift",
+      "sha256": "c2a10d60058bf6b594e5db91cafd433b8df9222ffb7f2ebbd8febde8a2b75e23"
     }
   ]
 }

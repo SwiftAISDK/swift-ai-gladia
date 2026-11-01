@@ -25,7 +25,8 @@
       "Tests/SwiftAIGladiaTests/FixtureDownloadTransport.swift",
       "Tests/SwiftAIGladiaTests/GladiaProviderTests.swift",
       "Tests/SwiftAIGladiaTests/GladiaTranscriptionSchemaAndLifecycleTests.swift",
-      "Tests/SwiftAIGladiaTests/TestSupport.swift"
+      "Tests/SwiftAIGladiaTests/TestSupport.swift",
+      "Tests/SwiftAIGladiaTests/Weekly20261101CredentialsTests.swift"
     ],
     "resources": []
   },

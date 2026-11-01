@@ -3,16 +3,19 @@
   "packages": [
     {
       "name": "@ai-sdk/gladia",
-      "reviewedVersion": "3.0.68",
+      "reviewedVersion": "3.0.72",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.gladia`, `GladiaTranscriptionModel`, `GladiaProviderTests.swift`",
+      "evidence": "`AIProviders.gladia`, `GladiaTranscriptionModel`, `GladiaProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-UyzBg71CKB+qoLJF5t56TdT5E7Ffgu1QE0ALkSGjwheJqz65g6Z/TMZDahM2IZHS8pupLcGVBnFpVwUyyo/UJA==",
-      "sourceRef": "npm:@ai-sdk/gladia@3.0.68",
-      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
-      "testRefRelationship": "inventory-snapshot-not-release-verified",
-      "contractFamilies": [],
-      "contractReview": "not-imported; inspect upstream declarations before extraction"
+      "archiveIntegrity": "sha512-ThGKYBeKIk1VaEmzn0oO6FU4Z7wYjbcJ6YutbkYfLxBgCMyeVCtKqgkAqKSH8c07pZBKd2CDXUHXIhkhPCZCdg==",
+      "sourceRef": "npm:@ai-sdk/gladia@3.0.72",
+      "testRef": "9b603d36186b75e58d5479445a96c76f6e2d2700",
+      "testRefRelationship": "matching-release",
+      "contractFamilies": [
+        "ProviderV4",
+        "TranscriptionModelV4"
+      ],
+      "contractReview": "2026-11-01: published declarations, source and exact matching-release changed tests reviewed; scoped dispositions and Swift translations are in Docs/WeeklyUpstreamAudit20261101.json. Existing broader product gaps remain; reviewed delta is not full-package parity."
     }
   ]
 }
