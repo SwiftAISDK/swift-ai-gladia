@@ -26,6 +26,8 @@
       "Tests/SwiftAIGladiaTests/FixtureDownloadTransport.swift",
       "Tests/SwiftAIGladiaTests/GladiaProviderTests.swift",
       "Tests/SwiftAIGladiaTests/GladiaTranscriptionSchemaAndLifecycleTests.swift",
+      "Tests/SwiftAIGladiaTests/GladiaUpstreamFixtures.swift",
+      "Tests/SwiftAIGladiaTests/GladiaUpstreamParityTests.swift",
       "Tests/SwiftAIGladiaTests/TestSupport.swift",
       "Tests/SwiftAIGladiaTests/Weekly20261101CredentialsTests.swift",
       "Tests/SwiftAIGladiaTests/Weekly20261108GladiaTests.swift",
